@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System;
 using System.Collections;
-
+//this is a git test
 public class ScoreManager : MonoBehaviour {
 
 	Text txt;	//VARIABLE FOR THE TEXT COMPONENT
