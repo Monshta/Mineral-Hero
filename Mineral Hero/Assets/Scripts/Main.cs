@@ -15,6 +15,14 @@ public class Main : MonoBehaviour {
 	public Text minerCountUI;
 	public int cartCount = 0;
 	public Text cartCountUI;
+	public int robotCount = 0;
+	public Text robotCountUI; // idk how to make the little images but i still made these for you
+	public int extractorCount = 0;
+	public Text extractorCountUI;
+	public int laserCount = 0;
+	public Text laserCountUI;
+	public int goatCount = 0;
+	public Text goatCountUI;
 
 	void Awake (){
 
@@ -39,6 +47,24 @@ public class Main : MonoBehaviour {
 	public void upgradeCart(int ca){	//UPGRADE CART
 		mineralPerSecond += 2;
 		cartCount++;
+	}
+	public void upgradeRobot(int r){ //Robot upgrade
+		mineralPerSecond += 5;
+		robotCount ++;
+	}
+	public void upgradeExtractor(int e){ //extractor upgrade
+		clickStrength += 5;
+		extractorCount ++;
+	}
+	public void upgradeLaser(int l){ //Laser upgrade
+		mineralPerSecond += 10;
+		laserCount ++;
+	}
+	public void upgradeGoat(int g){ //goat upgrade
+		mineralPerSecond += 10;
+		clickStrength += 10;
+		goatCount ++;
+
 	}
 }
 
