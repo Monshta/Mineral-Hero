@@ -9,6 +9,8 @@ public class ScoreManager : MonoBehaviour {
 	private GameObject gameManager;	//VARIABLE FOR THE "GAMEMANAGER" GAMEOBJECT
 	private Main main;	//VARIABLE FOR THE "MAIN" SCRIPT
 
+	public Text mpsText;
+
 	void Start () {
 		txt = GetComponent<Text> ();	//REFERS TO TEXT COMPONENT FROM PARENT OF THIS SCRIPT
 		gameManager = GameObject.Find ("GameManager");	//FINDS FOR THE GAMEOBJECT CALLED "MINE"
@@ -17,5 +19,6 @@ public class ScoreManager : MonoBehaviour {
 
 	void Update () {
 		txt.text = Mathf.FloorToInt (main.mineralCount) + "";	//ROUNDS THE MINERAL COUNT TO AN INTEGER
+		mpsText.text = main.mineralPerSecond + " MPS";
 	}
 }

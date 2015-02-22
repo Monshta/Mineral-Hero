@@ -41,6 +41,10 @@ public class Main : MonoBehaviour {
 		clickerCountUI.text = clickerCount + "";
 		minerCountUI.text = minerCount + "";
 		cartCountUI.text = cartCount + "";
+		robotCountUI.text = robotCount + "";
+		extractorCountUI.text = extractorCount + "";
+		laserCountUI.text = laserCount + "";
+		goatCountUI.text = goatCount + "";
 	}
 	public void upgradeClick(int c) {	//UPGRADE CLICKER
 		if(mineralCount >= clickerCost){
@@ -49,7 +53,6 @@ public class Main : MonoBehaviour {
 			mineralCount -= clickerCost;
 			clickerCost+=2;
 		}
-		else ;
 	}
 	public void upgradeMiner(int m){	//UPGRADE MINER
 		if (mineralCount >= minerCost) {
@@ -57,23 +60,23 @@ public class Main : MonoBehaviour {
 			minerCount++;
 			mineralCount -= minerCost;
 			minerCost += 3;
-	} else ;					
+		}				
 	}
 	public void upgradeCart(int ca){	//UPGRADE CART
-			if (mineralCount >= cartCost) {
-				mineralPerSecond += 2;
-				cartCount++;
-				mineralCount -= cartCost;
-				cartCost += 10;
-			} else ;
+		if (mineralCount >= cartCost) {
+			mineralPerSecond += 2;
+			cartCount++;
+			mineralCount -= cartCost;
+			cartCost += 10;
 		}
+	}
 	public void upgradeRobot(int r){ //Robot upgrade
 		if (mineralCount >= robotCost) {
 			mineralPerSecond += 5;
 			robotCount ++;
 			mineralCount -= robotCost;
 			robotCost += 25;
-			} else ;
+		}
 	}
 	public void upgradeExtractor(int e){ //extractor upgrade
 		if (mineralCount >= extractorCost) {
@@ -81,7 +84,7 @@ public class Main : MonoBehaviour {
 			extractorCount ++;
 			mineralCount-= extractorCost;
 			extractorCost+= 50;
-			} else ;
+		}
 	}
 	public void upgradeLaser(int l){ //Laser upgrade
 		if(mineralCount>= laserCost){
@@ -89,16 +92,16 @@ public class Main : MonoBehaviour {
 			laserCount ++;
 			mineralCount -= laserCost;
 			laserCost+=100;
-		}else ;
+		}
 	}
 	public void upgradeGoat(int g){ //goat upgrade, yep he's OP
 		if(mineralCount>= goatCost){
-		mineralPerSecond += 10;
-		clickStrength += 10;
-		goatCount ++;
-		mineralCount -= goatCost;
-		goatCost+=500;
-		}else ;
+			mineralPerSecond += 10;
+			clickStrength += 10;
+			goatCount ++;
+			mineralCount -= goatCost;
+			goatCost+=500;
+		}
 
 	}
 }
