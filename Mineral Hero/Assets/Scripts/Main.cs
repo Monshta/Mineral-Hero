@@ -6,6 +6,7 @@ using System;
 public class Main : MonoBehaviour {
 	public float mineralCount = 0;	//TOTAL MINERALS
 	public float mineralPerSecond = 0;	//HOW MANY MINERALS YOU GAIN PER SECOND
+	public float timer;
 
 	public int clickStrength = 1;	//HOW MANY MINERALS YOU GAIN PER CLICK
 
@@ -36,7 +37,14 @@ public class Main : MonoBehaviour {
 	}
 
 	void Update (){
-		mineralCount += mineralPerSecond * Time.deltaTime;	//INCREASE TOTAL MINERALS BY MINERALPERSECOND EVERY SECOND
+		//mineralCount += mineralPerSecond * Time.deltaTime;	//INCREASE TOTAL MINERALS BY MINERALPERSECOND EVERY SECOND
+		if (mineralPerSecond > 0) {
+			timer += Time.deltaTime;
+		}
+		if (timer >= 1) {
+			mineralCount += mineralPerSecond;
+			timer = 0;
+		}
 		//COUNTER UI
 		clickerCountUI.text = clickerCount + "";
 		minerCountUI.text = minerCount + "";
@@ -80,7 +88,7 @@ public class Main : MonoBehaviour {
 	}
 	public void upgradeExtractor(int e){ //extractor upgrade
 		if (mineralCount >= extractorCost) {
-			clickStrength += 5;
+			mineralPerSecond += 8;
 			extractorCount ++;
 			mineralCount-= extractorCost;
 			extractorCost+= 50;
@@ -96,8 +104,7 @@ public class Main : MonoBehaviour {
 	}
 	public void upgradeGoat(int g){ //goat upgrade, yep he's OP
 		if(mineralCount>= goatCost){
-			mineralPerSecond += 10;
-			clickStrength += 10;
+			mineralPerSecond += 15;
 			goatCount ++;
 			mineralCount -= goatCost;
 			goatCost+=500;
