@@ -13,6 +13,8 @@ public class Main : MonoBehaviour {
 	public Text clickerCountUI;
 	public int minerCount = 0;
 	public Text minerCountUI;
+	public int cartCount = 0;
+	public Text cartCountUI;
 
 	void Awake (){
 
@@ -23,14 +25,26 @@ public class Main : MonoBehaviour {
 		//COUNTER UI
 		clickerCountUI.text = clickerCount + "";
 		minerCountUI.text = minerCount + "";
+		cartCountUI.text = cartCount + "";
 	}
-	public void upgradeClick(int a) {	//UPGRADE CLICKER
+	public void upgradeClick(int c) {	//UPGRADE CLICKER
 		clickStrength++;
 		clickerCount++;
 
 	}
-	public void upgradeMiner(int z){	//UPGRADE MINER
+	public void upgradeMiner(int m){	//UPGRADE MINER
 		mineralPerSecond++;
 		minerCount++;
 	}
+	public void upgradeCart(int ca){	//UPGRADE CART
+		mineralPerSecond += 2;
+		cartCount++;
+	}
 }
+
+
+
+
+
+
+
