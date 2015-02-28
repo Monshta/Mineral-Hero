@@ -103,9 +103,10 @@ public class Main : MonoBehaviour {
 		//Miner Modifyer
 		while ((newMiner==true)&(activateMiner == true)) { ///Might have over killed it, but it works...
 			if (minerBuff == true) {					// Except for the first part, it jumps to 4 when activated
-					minerBuffCount = minerCount * 2;	//i think it excecutes the else statement too
-					mineralPerSecond += minerBuffCount;
+					minermps += 1;//i think it excecutes the else statement too
+					mineralPerSecond = minermps;
 					minerBuff = false;
+					newMiner = false;
 			} 
 			else {
 					mineralPerSecond += 1;
@@ -115,9 +116,10 @@ public class Main : MonoBehaviour {
 		//Cart Modifyer
 		while ((newCart==true)&(activateCart == true)) { 
 			if (cartBuff == true) {					
-				cartBuffCount = cartCount * 4;	
-				mineralPerSecond += minerBuffCount;
+				cartmps *=4;	
+				mineralPerSecond += cartmps;
 				cartBuff = false;
+				newCart = false;
 			} 
 			else {
 				mineralPerSecond += 3;
@@ -127,9 +129,10 @@ public class Main : MonoBehaviour {
 		//Robot Modifyer
 		while ((newRobot==true)&(activateRobot == true)) { //im gonna stop tweaking the numbers here coz they 
 			if (robotBuff == true) {	//start getting out of hand				
-				robotBuffCount = robotCount * 4;	
-				mineralPerSecond += robotBuffCount;
+				robotmps *= 4;	
+				mineralPerSecond += robotmps;
 				robotBuff = false;
+				newRobot=false;
 			} 
 			else {
 				mineralPerSecond += 3;
@@ -139,9 +142,10 @@ public class Main : MonoBehaviour {
 		//Extractor Modifyer
 		while ((newExtractor==true)&(activateExtractor == true)) {  //these if/else mechanics are so wierd
 			if (extractorBuff == true) {					// we can fix the numbers when we work on it together saturday
-				extractorBuffCount = extractorCount * 4;	
-				mineralPerSecond += extractorBuffCount;
+				extractormps *= 4;	
+				mineralPerSecond += extractormps;
 				extractorBuff = false;
+				newExtractor = false;
 			} 
 			else {
 				mineralPerSecond += 3;
@@ -150,10 +154,12 @@ public class Main : MonoBehaviour {
 		}
 		//Laser Modifyer
 		while ((newLaser==true)&(activateLaser == true)) {  
-			if (laserBuff == true) {					
+			if (laserBuff == true) {
+				lasermps *=4;
 				laserBuffCount = laserCount * 4;	
 				mineralPerSecond += laserBuffCount;
 				laserBuff = false;
+				newLaser = false;
 			} 
 			else {
 				mineralPerSecond += 3;
@@ -163,9 +169,10 @@ public class Main : MonoBehaviour {
 		//Goat modifyer
 		while ((newGoat==true)&(activateGoat == true)) {  
 			if (goatBuff == true) {					
-				goatBuffCount = goatCount * 4;	
+				goatmps = goatCount *= 4;	
 				mineralPerSecond += goatBuffCount;
 				goatBuff = false;
+				newGoat = false;
 			} 
 			else {
 				mineralPerSecond += 3;
@@ -183,7 +190,7 @@ public class Main : MonoBehaviour {
 	}
 	public void upgradeMiner(int m){	//UPGRADE MINER
 		if (mineralCount >= minerCost) {
-			mineralPerSecond += minermps;
+			mineralPerSecond += 1;
 			minerCount++;
 			mineralCount -= minerCost;
 			minerCost += 3;
@@ -194,10 +201,11 @@ public class Main : MonoBehaviour {
 		minerBuff = true;
 		activateMiner = true;
 
+
 	}
 	public void upgradeCart(int ca){	//UPGRADE CART
 		if (mineralCount >= cartCost) {
-			mineralPerSecond += cartmps;
+			mineralPerSecond += 4;
 			cartCount++;
 			mineralCount -= cartCost;
 			cartCost += 10;
@@ -212,7 +220,7 @@ public class Main : MonoBehaviour {
 	}
 	public void upgradeRobot(int r){ //Robot upgrade
 		if (mineralCount >= robotCost) {
-			mineralPerSecond += robotmps;
+			mineralPerSecond += 4;
 			robotCount ++;
 			mineralCount -= robotCost;
 			robotCost += 25;
@@ -226,7 +234,7 @@ public class Main : MonoBehaviour {
 	}
 	public void upgradeExtractor(int e){ //extractor upgrade
 		if (mineralCount >= extractorCost) {
-			mineralPerSecond += extractormps;
+			mineralPerSecond += 4;
 			extractorCount ++;
 			mineralCount -= extractorCost;
 			extractorCost += 50;
@@ -241,7 +249,7 @@ public class Main : MonoBehaviour {
 
 	public void upgradeLaser(int l){ //Laser upgrade
 		if(mineralCount>= laserCost){
-			mineralPerSecond += lasermps;
+			mineralPerSecond += 4;
 			laserCount ++;
 			mineralCount -= laserCost;
 			laserCost+=100;
@@ -255,7 +263,7 @@ public class Main : MonoBehaviour {
 	}
 	public void upgradeGoat(int g){ //goat upgrade, yep he's OP
 		if(mineralCount>= goatCost){
-			mineralPerSecond += goatmps;
+			mineralPerSecond += 4;
 			goatCount ++;
 			mineralCount -= goatCost;
 			goatCost+=500;
