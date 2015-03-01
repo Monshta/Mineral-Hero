@@ -15,52 +15,56 @@ public class Description : MonoBehaviour {
 	}	
 
 	public void ClickerMessage (string c) {
-						descText.text = "Clicker" +
-						"\nCost: " + main.clickerCost + 
-						"\nGaining: " + main.clickStrength + " Per Click" +
-						"\nClick Click Click Click Click Click Click Click Click.";
+		descText.text = "Clicker" +
+		"\nCost: " + main.clickerCost + 
+		"\nGaining: " + main.clickStrength + " Per Click" +
+		"\nClick Click Click Click Click Click Click Click Click.";
 	}
 
 	public void MinerMessage (string m) {
 		descText.text = "Miner" +
-						"\nCost: " + main.minerCost + 
-						"\nGaining: +" + main.minermps + " mps" +
-						"\nMiners Who Mine In Search Of The One True Goat.";
+		"\nCost: " + main.minerCost + 
+		"\nGaining: +" + main.minermps + " mps" +
+		"\nMiners Who Mine In Search Of The One True Goat.";
 	}
 
 	public void CartMessage (string ca) {
 		descText.text = "Mine Cart" +
-						"\nCost: " + main.cartCost + 
-						"\nGaining: +" + main.cartmps + " mps" +
-						"\nThe Carts Of The Miners.";
+		"\nCost: " + main.cartCost + 
+		"\nGaining: +" + main.cartmps + " mps" +
+		"\nThe Carts Of The Miners.";
 	}
 
 	public void RobotMessage (string r) {
-						descText.text = "Robot" +
-						"\nCost: " + main.robotCost + 
-						"\nGaining: +" + main.robotmps + " mps" +
-						"\nBoom Bam Bop. Bada Bop Boom Pow!";
+		descText.text = "Robot" +
+		"\nCost: " + main.robotCost + 
+		"\nGaining: +" + main.robotmps + " mps" +
+		"\nBoom Bam Bop. Bada Bop Boom Pow!";
 	}
 
 	public void ExtractorMessage (string e) {
-						descText.text = "Extractor" +
-						"\nCost: " + main.extractorCost + 
-						"\nGaining: +" + main.extractormps + " mps" +
-						"\nI don't know what to put here yo.";
+		descText.text = "Extractor" +
+		"\nCost: " + main.extractorCost + 
+		"\nGaining: +" + main.extractormps + " mps" +
+		"\nI don't know what to put here yo.";
 	}
 
 	public void LaserMessage (string l) {
-						descText.text = "Laser" +
-						"\nCost: " + main.laserCost + 
-						"\nGaining: +" + main.lasermps + " mps" +
-						"\nLmfao it's 11:29PM and I'm tired.";
+		descText.text = "Laser" +
+		"\nCost: " + main.laserCost + 
+		"\nGaining: +" + main.lasermps + " mps" +
+		"\nLmfao it's 11:29PM and I'm tired.";
 	}
 
 	public void GoatMessage (string g) {
-						descText.text = "Goat" +
-						"\nCost: " + main.goatCost + 
-						"\nGaining: +" + main.goatmps + " mps" +
-						"\nIs that Gosu?!";
+		descText.text = "Goat" +
+		"\nCost: " + main.goatCost + 
+		"\nGaining: +" + main.goatmps + " mps" +
+		"\nIs that Gosu?!";
+	}
+
+	public void exitMessage (string ex) {
+		descText.text = "";
 	}
 }
 
