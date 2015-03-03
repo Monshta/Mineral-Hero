@@ -10,37 +10,37 @@ public class Main : MonoBehaviour {
 	
 	public int clickStrength = 1;
 	public int clickerCount = 0;
-	public int clickerCost = 125;
+	public int clickerCost = 10;
 	public Text clickerCountUI;
 	
 	public int minerCount = 0;
-	public int minerCost = 25;
+	public int minerCost = 30;
 	public int minermps = 1;
 	public Text minerCountUI;
 	
 	public int cartCount = 0;
-	public int cartCost = 50;
+	public int cartCost = 150;
 	public int cartmps = 2;
 	public Text cartCountUI;
 	
 	public int robotCount = 0;
-	public int robotCost = 100;
+	public int robotCost = 500;
 	public int robotmps = 5;
 	public Text robotCountUI;
 	
 	public int extractorCount = 0;
-	public int extractorCost = 300;
+	public int extractorCost = 1500;
 	public int extractormps = 8;
 	public Text extractorCountUI;
 	
 	public int laserCount = 0;
-	public int laserCost = 700;
-	public int lasermps = 10;
+	public int laserCost = 5000;
+	public int lasermps = 15;
 	public Text laserCountUI;
 	
 	public int goatCount = 0;
-	public int goatCost = 1000;
-	public int goatmps = 15;
+	public int goatCost = 10000;
+	public int goatmps = 25;
 	public Text goatCountUI;
 	
 	public GameObject steroidModUI;
@@ -50,12 +50,12 @@ public class Main : MonoBehaviour {
 	public GameObject glassModUI;
 	public GameObject goatModUI;
 	
-	public int steroidModCost = 50;
-	public int oilModCost = 50;
-	public int batteryModCost = 50;
-	public int titaniumModCost = 50;
-	public int glassModCost = 50;
-	public int goatModCost = 50;
+	public int steroidModCost = 150;
+	public int oilModCost = 250;
+	public int batteryModCost = 800;
+	public int titaniumModCost = 3000;
+	public int glassModCost = 8000;
+	public int goatModCost = 15000;
 	
 	
 	void Update (){
@@ -93,14 +93,14 @@ public class Main : MonoBehaviour {
 		if (mineralCount >= minerCost) {
 			minerCount++;
 			mineralCount -= minerCost;
-			minerCost *= 2;
+			minerCost *= 3;
 		}				
 	}
 	public void upgradeCart(int ca){	//UPGRADE CART
 		if (mineralCount >= cartCost) {
 			cartCount++;
 			mineralCount -= cartCost;
-			cartCost += 10;
+			cartCost *= 3;
 		}
 	}
 	public void upgradeRobot(int r){ //Robot upgrade
@@ -108,7 +108,7 @@ public class Main : MonoBehaviour {
 			mineralPerSecond += robotmps;
 			robotCount ++;
 			mineralCount -= robotCost;
-			robotCost += 25;
+			robotCost *= 2;
 		}
 	}
 	public void upgradeExtractor(int e){ //extractor upgrade
@@ -116,7 +116,7 @@ public class Main : MonoBehaviour {
 			mineralPerSecond += extractormps;
 			extractorCount ++;
 			mineralCount -= extractorCost;
-			extractorCost += 50;
+			extractorCost *= 3;
 		}
 	}
 	public void upgradeLaser(int l){ //Laser upgrade
@@ -124,7 +124,7 @@ public class Main : MonoBehaviour {
 			mineralPerSecond += lasermps;
 			laserCount ++;
 			mineralCount -= laserCost;
-			laserCost+=100;
+			laserCost*=2;
 		}
 	}
 	public void upgradeGoat(int g){ //goat upgrade, yep he's OP
@@ -132,7 +132,7 @@ public class Main : MonoBehaviour {
 			mineralPerSecond += goatmps;
 			goatCount ++;
 			mineralCount -= goatCost;
-			goatCost+=500;
+			goatCost*=2;
 		}
 	}
 	
