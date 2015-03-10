@@ -4,6 +4,9 @@ using System.Collections;
 using System;
 
 public class Main : MonoBehaviour {
+	public GameObject upgradePanel;
+	public bool toggleUpgradePanel = false;
+
 	public float mineralCount = 0;	//TOTAL MINERALS
 	public float mineralPerSecond = 0;	//HOW MANY MINERALS YOU GAIN PER SECOND
 	public float timer;
@@ -80,7 +83,21 @@ public class Main : MonoBehaviour {
 		extractorCountUI.text = extractorCount + "";
 		laserCountUI.text = laserCount + "";
 		goatCountUI.text = goatCount + "";
+
+		if (toggleUpgradePanel) {
+			upgradePanel.SetActive (true);
+		}else {
+			upgradePanel.SetActive (false);
+		}
 	}
+	public void tUpgradePanel () {
+		if (toggleUpgradePanel) {
+			toggleUpgradePanel = false;
+		}else {
+			toggleUpgradePanel = true;
+		}
+	}
+
 	public void upgradeClick(int c) {	//UPGRADE CLICKER
 		if(mineralCount >= clickerCost){
 			clickStrength++;
