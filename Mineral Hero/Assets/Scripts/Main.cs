@@ -161,7 +161,7 @@ public class Main : MonoBehaviour {
 	}
 	public void titaniumMod(int t) {
 		if(mineralCount>=titaniumModCost){
-			robotmps *= 2;
+			extractormps *= 2;
 			mineralCount-=titaniumModCost;
 			titaniumModUI.SetActive (false);
 		};
