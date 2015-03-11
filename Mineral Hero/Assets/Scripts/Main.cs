@@ -4,8 +4,6 @@ using System.Collections;
 using System;
 
 public class Main : MonoBehaviour {
-	public GameObject upgradePanel;
-	public bool toggleUpgradePanel = false;
 
 	public float mineralCount = 0;	//TOTAL MINERALS
 	public float mineralPerSecond = 0;	//HOW MANY MINERALS YOU GAIN PER SECOND
@@ -17,17 +15,17 @@ public class Main : MonoBehaviour {
 	public Text clickerCountUI;
 	
 	public int minerCount = 0;
-	public int minerCost = 30;
+	public float minerCost = 30f;
 	public int minermps = 1;
 	public Text minerCountUI;
 	
 	public int cartCount = 0;
-	public int cartCost = 150;
+	public float cartCost = 150f;
 	public int cartmps = 2;
 	public Text cartCountUI;
 	
 	public int robotCount = 0;
-	public int robotCost = 500;
+	public float robotCost = 500f;
 	public int robotmps = 5;
 	public Text robotCountUI;
 	
@@ -83,19 +81,6 @@ public class Main : MonoBehaviour {
 		extractorCountUI.text = extractorCount + "";
 		laserCountUI.text = laserCount + "";
 		goatCountUI.text = goatCount + "";
-
-		if (toggleUpgradePanel) {
-			upgradePanel.SetActive (true);
-		}else {
-			upgradePanel.SetActive (false);
-		}
-	}
-	public void tUpgradePanel () {
-		if (toggleUpgradePanel) {
-			toggleUpgradePanel = false;
-		}else {
-			toggleUpgradePanel = true;
-		}
 	}
 
 	public void upgradeClick(int c) {	//UPGRADE CLICKER
@@ -110,14 +95,14 @@ public class Main : MonoBehaviour {
 		if (mineralCount >= minerCost) {
 			minerCount++;
 			mineralCount -= minerCost;
-			minerCost *= 3;
+			minerCost *= 1.7f;
 		}				
 	}
 	public void upgradeCart(int ca){	//UPGRADE CART
 		if (mineralCount >= cartCost) {
 			cartCount++;
 			mineralCount -= cartCost;
-			cartCost *= 3;
+			cartCost *= 1.8f;
 		}
 	}
 	public void upgradeRobot(int r){ //Robot upgrade
@@ -125,7 +110,7 @@ public class Main : MonoBehaviour {
 			mineralPerSecond += robotmps;
 			robotCount ++;
 			mineralCount -= robotCost;
-			robotCost *= 2;
+			robotCost *= 1.9f;
 		}
 	}
 	public void upgradeExtractor(int e){ //extractor upgrade
@@ -175,8 +160,11 @@ public class Main : MonoBehaviour {
 		}
 	}
 	public void titaniumMod(int t) {
-		extractormps *= 2;
-		titaniumModUI.SetActive (false);
+		if(mineralCount>=titaniumModCost){
+			robotmps *= 2;
+			mineralCount-=titaniumModCost;
+			titaniumModUI.SetActive (false);
+		};
 	}
 	public void glassMod(int g) {
 		if(mineralCount>=glassModCost){	

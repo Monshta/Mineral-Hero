@@ -23,21 +23,21 @@ public class Description : MonoBehaviour {
 
 	public void MinerMessage (string m) {
 		descText.text = "Miner" +
-		"\nCost: " + main.minerCost + 
+		"\nCost: " + Mathf.FloorToInt(main.minerCost) + 
 		"\nGaining: +" + main.minermps + " mps" +
 		"\nMiners Who Mine In Search Of The One True Goat.";
 	}
 
 	public void CartMessage (string ca) {
 		descText.text = "Mine Cart" +
-		"\nCost: " + main.cartCost + 
+		"\nCost: " + Mathf.FloorToInt(main.cartCost) + 
 		"\nGaining: +" + main.cartmps + " mps" +
 		"\nThe Carts Of The Miners.";
 	}
 
 	public void RobotMessage (string r) {
 		descText.text = "Robot" +
-		"\nCost: " + main.robotCost + 
+		"\nCost: " + Mathf.FloorToInt(main.robotCost) + 
 		"\nGaining: +" + main.robotmps + " mps" +
 		"\nBoom Bam Bop. Bada Bop Boom Pow!";
 	}
