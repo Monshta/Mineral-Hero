@@ -57,7 +57,30 @@ public class Main : MonoBehaviour {
 	public int titaniumModCost = 3000;
 	public int glassModCost = 8000;
 	public int goatModCost = 15000;
-	
+
+	public int upGoat1mps = 35;
+	public int upGoat1Count = 0;
+	public int upGoat1Cost = 2;
+
+	public int upGoat2mps = 40;
+	public int upGoat2Count = 0;
+	public int upGoat2Cost = 2;
+
+	public int upGoat3mps = 45;
+	public int upGoat3Count = 0;
+	public int upGoat3Cost = 2;
+
+	public int upGoat4mps = 50;
+	public int upGoat4Count = 0;
+	public int upGoat4Cost = 2;
+
+	public int upGoat5mps = 5;
+	public int upGoat5Count = 0;
+	public int upGoat5Cost = 2;
+
+	public int upGoat6mps = 5;
+	public int upGoat6Count = 0;
+	public int upGoat6Cost = 2;
 	
 	void Update (){
 		mineralPerSecond =  (minermps * minerCount)+
@@ -65,7 +88,13 @@ public class Main : MonoBehaviour {
 				(robotmps * robotCount)+
 				(extractormps * extractorCount)+
 				(lasermps * laserCount)+
-				(goatmps * goatCount);
+				(goatmps * goatCount) + 
+				(upGoat1mps * upGoat1Count) +
+				(upGoat2mps * upGoat2Count) +
+				(upGoat3mps * upGoat3Count) +
+				(upGoat4mps * upGoat4Count) +
+				(upGoat5mps * upGoat5Count) +
+				(upGoat6mps * upGoat6Count);
 		if (mineralPerSecond > 0) {
 			timer += Time.deltaTime;
 		}
@@ -180,4 +209,57 @@ public class Main : MonoBehaviour {
 			goatModUI.SetActive (false);
 		}
 	}
+	public void upGoat1(int up1){
+		if ((mineralCount >= upGoat1Cost)&&(goatCount >= 0)&&(laserCount >= 0)){
+			mineralPerSecond += upGoat1mps;
+			upGoat1Count ++; 
+			mineralCount -= upGoat1Cost;
+			upGoat1Cost *=2;
+		}
+		}
+	public void upGoats2(int up2){
+		if ((mineralCount >= upGoat2Cost)&&(goatCount >= 0)&&(laserCount >= 0)){
+			mineralPerSecond += upGoat2mps;
+			upGoat1Count ++; 
+			mineralCount -= upGoat2Cost;
+			upGoat2Cost *=2;
+		}
+	}
+
+	public void upGoats3(int up3){
+		if ((mineralCount >= upGoat3Cost)&&(goatCount >= 0)&&(laserCount >= 0)){
+			mineralPerSecond += upGoat3mps;
+			upGoat1Count ++; 
+			mineralCount -= upGoat3Cost;
+			upGoat3Cost *=2;
+		}
+	}
+
+	public void upGoats4(int up4){
+		if ((mineralCount >= upGoat3Cost) && (goatCount >= 0) && (laserCount >= 0)) {
+			mineralPerSecond += upGoat4mps;
+			upGoat1Count ++; 
+			mineralCount -= upGoat3Cost;
+			upGoat4Cost *= 2;
+		}
+	}
+
+	public void upGoats5(int up5){
+		if ((mineralCount >= upGoat5Cost) && (goatCount >= 0) && (laserCount >= 0)) {
+			mineralPerSecond += upGoat5mps;
+			upGoat1Count ++; 
+			mineralCount -= upGoat5Cost;
+			upGoat5Cost *= 2;
+		}
+	}
+
+	public void upGoats6(int up6){
+		if ((mineralCount >= upGoat6Cost) && (minerCount >= 3) && (laserCount >= 0)) {
+			mineralPerSecond += upGoat6mps;
+			upGoat1Count ++; 
+			mineralCount -= upGoat6Cost;
+			upGoat6Cost *= 2;
+		}
+	}
+		
 }
