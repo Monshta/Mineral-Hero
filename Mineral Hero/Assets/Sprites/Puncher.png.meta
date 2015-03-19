@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: d30b1d3b0fc4d064bb8a38f95b53a7b8
+guid: 90598d8ceb1747941b2bb92d07659451
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Miner0000_0
-    21300002: Miner0000_1
+    21300000: Puncher_0
+    21300002: Puncher_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,23 +45,23 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Miner0000_0
+    - name: Puncher_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 12
-        width: 14
-        height: 16
+        x: 0
+        y: 1
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Miner0000_1
+    - name: Puncher_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 12
-        width: 12
-        height: 16
+        x: 17
+        y: 1
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
