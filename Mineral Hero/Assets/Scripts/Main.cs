@@ -60,27 +60,27 @@ public class Main : MonoBehaviour {
 
 	public int upGoat1mps = 35;
 	public int upGoat1Count = 0;
-	public int upGoat1Cost = 2;
+	public int upGoat1Cost = 20000;
 
 	public int upGoat2mps = 40;
 	public int upGoat2Count = 0;
-	public int upGoat2Cost = 2;
+	public int upGoat2Cost = 50000;
 
 	public int upGoat3mps = 45;
 	public int upGoat3Count = 0;
-	public int upGoat3Cost = 2;
+	public int upGoat3Cost = 100000;
 
 	public int upGoat4mps = 50;
 	public int upGoat4Count = 0;
-	public int upGoat4Cost = 2;
+	public int upGoat4Cost = 200000;
 
 	public int upGoat5mps = 5;
 	public int upGoat5Count = 0;
-	public int upGoat5Cost = 2;
+	public int upGoat5Cost = 500000;
 
 	public int upGoat6mps = 5;
 	public int upGoat6Count = 0;
-	public int upGoat6Cost = 2;
+	public int upGoat6Cost = 10000000;
 	
 	void Update (){
 		mineralPerSecond =  (minermps * minerCount)+
