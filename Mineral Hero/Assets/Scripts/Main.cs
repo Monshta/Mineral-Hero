@@ -210,14 +210,14 @@ public class Main : MonoBehaviour {
 		}
 	}
 	public void upGoat1(int up1){
-		if ((mineralCount >= upGoat1Cost)&&(goatCount >= 3)&&(minerCount >= 25)){
+		if ((mineralCount >= upGoat1Cost)&&(goatCount >= 0)&&(laserCount >= 0)){
 			upGoat1Count ++; 
 			mineralCount -= upGoat1Cost;
 			upGoat1Cost *=2;
 		}
 		}
 	public void upGoats2(int up2){
-		if ((mineralCount >= upGoat2Cost)&&(goatCount >= 8)&&(cartCount >= 50)){
+		if ((mineralCount >= upGoat2Cost)&&(goatCount >= 0)&&(laserCount >= 0)){
 			upGoat2Count ++; 
 			mineralCount -= upGoat2Cost;
 			upGoat2Cost *=2;
@@ -225,7 +225,7 @@ public class Main : MonoBehaviour {
 	}
 
 	public void upGoats3(int up3){
-		if ((mineralCount >= upGoat3Cost)&&(goatCount >= 20)&&(robotCount >= 30)){
+		if ((mineralCount >= upGoat3Cost)&&(goatCount >= 0)&&(laserCount >= 0)){
 			upGoat3Count ++; 
 			mineralCount -= upGoat3Cost;
 			upGoat3Cost *=2;
@@ -233,7 +233,7 @@ public class Main : MonoBehaviour {
 	}
 
 	public void upGoats4(int up4){
-		if ((mineralCount >= upGoat3Cost) && (goatCount >= 50) && (laserCount >= 50)) {
+		if ((mineralCount >= upGoat3Cost) && (goatCount >= 0) && (laserCount >= 0)) {
 			upGoat4Count ++; 
 			mineralCount -= upGoat3Cost;
 			upGoat4Cost *= 2;
@@ -241,7 +241,7 @@ public class Main : MonoBehaviour {
 	}
 
 	public void upGoats5(int up5){
-		if ((mineralCount >= upGoat5Cost) && (goatCount >= 100) && (laserCount >= 90)) {
+		if ((mineralCount >= upGoat5Cost) && (goatCount >= 0) && (laserCount >= 0)) {
 			upGoat5Count ++; 
 			mineralCount -= upGoat5Cost;
 			upGoat5Cost *= 2;
@@ -249,7 +249,7 @@ public class Main : MonoBehaviour {
 	}
 
 	public void upGoats6(int up6){
-		if ((mineralCount >= upGoat6Cost) && (goatCount >= 150) && (laserCount >= 130)) {
+		if ((mineralCount >= upGoat6Cost) && (minerCount >= 0) && (laserCount >= 0)) {
 			upGoat6Count ++; 
 			mineralCount -= upGoat6Cost;
 			upGoat6Cost *= 2;

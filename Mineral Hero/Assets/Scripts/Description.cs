@@ -46,21 +46,21 @@ public class Description : MonoBehaviour {
 		descText.text = "Extractor" +
 						"\nCost: " + main.extractorCost + 
 						"\nGaining: +" + main.extractormps + " mps" +
-						"\nExtract the essence of the goats.";
+						"\nI don't know what to put here yo.";
 	}
 
 	public void LaserMessage (string l) {
 		descText.text = "Laser" +
 						"\nCost: " + main.laserCost + 
 						"\nGaining: +" + main.lasermps + " mps" +
-						"\nPew pew pew pew pew.";
+						"\nLmfao it's 11:29PM and I'm tired.";
 	}
 
 	public void GoatMessage (string g) {
 		descText.text = "Goat" +
 						"\nCost: " + main.goatCost + 
 						"\nGaining: +" + main.goatmps + " mps" +
-						"\nMoooooooooo!";
+						"\nIs that Gosu?!";
 	}
 
 	public void SteroidMessage (string g) {
@@ -93,42 +93,6 @@ public class Description : MonoBehaviour {
 						"\nCost: " + main.goatModCost +
 						"\nDoubles The Efficiency Of Goats!";
 	}
-	public void juniorGoat () {
-		descText.text = "Requirements:" +
-						"\nCost: " + main.upGoat1Cost +
-						"\n3 Goats & 25 Miners." +
-						"\nMPS: " + main.upGoat1mps;
-	}
-	public void seniorGoat () {
-		descText.text = "Requirements:" +	
-						"\nCost: " + main.upGoat2Cost +
-						"\n8 Goats & 50 Minecarts." +
-						"\nMPS: " + main.upGoat2mps;
-	}
-	public void monsterGoat () {
-		descText.text = "Requirements:" +
-						"\nCost: " + main.upGoat3Cost +
-						"\n20 Goats & 30 Robot." +
-						"\nMPS: " + main.upGoat3mps;
-	}
-	public void zombieGoat () {
-		descText.text = "Requirements:" +
-						"\nCost: " + main.upGoat4Cost +
-						"\n50 Goats & 50 Lasers" +
-						"\nMPS: " + main.upGoat4mps;
-	}
-	public void terminatorGoat () {
-		descText.text = "Requirements:" +
-						"\nCost: " + main.upGoat5Cost +
-						"\n100 Goats & 90 Lasers" +
-						"\nMPS: " + main.upGoat5mps;
-	}
-	public void superGoat () {
-		descText.text = "Requirements:" +
-						"\nCost: " + main.upGoat6Cost +
-						"\n150 Goats & 130 Lasers" +
-						"\nMPS: " + main.upGoat6mps;
-	}	
 
 	public void exitMessage (string ex) {
 		descText.text = "";
